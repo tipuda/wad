@@ -1,0 +1,24 @@
+/* styles.css */
+
+/* Define styles for the body element */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Define styles for heading elements */
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #666;
+}
+
+/* Define a class-based style */
+.my-class {
+  font-weight: bold;
+  text-decoration: underline;
+}

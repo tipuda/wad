@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .container h2 {
+      text-align: center;
+    }
+
+    .container input[type=text], .container input[type=password], .container input[type=email] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .container select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .container input[type=radio] {
+      margin-bottom: 10px;
+    }
+
+    .container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .container input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    .container input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var name = document.forms["registrationForm"]["name"].value;
+      var password = document.forms["registrationForm"]["password"].value;
+      var email = document.forms["registrationForm"]["email"].value;
+      var phone = document.forms["registrationForm"]["phone"].value;
+      var sex = document.forms["registrationForm"]["sex"].value;
+      var dobDay = document.forms["registrationForm"]["dob-day"].value;
+      var dobMonth = document.forms["registrationForm"]["dob-month"].value;
+      var dobYear = document.forms["registrationForm"]["dob-year"].value;
+      var languages = document.getElementsByName("languages[]");
+      
+      // Validate name
+      if (name == "") {
+        alert("Please enter your name.");
+        return false;
+      }
+      
+      // Validate password
+      if (password == "") {
+        alert("Please enter a password.");
+        return false;
+      }
+      
+      // Validate email
+      var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+      
+      // Validate phone number
+      var phonePattern = /^\d{10}$/;
+      if (!phone.match(phonePattern)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return false;
+      }
+      
+      // Validate sex
+      if (sex == "") {
+        alert("Please select your sex.");
+        return false;
+      }
+      
+      // Validate date of birth
+      if (dobDay == "" || dobMonth == "" || dobYear == "") {
+        alert("Please select your date of birth.");
+        return false;
+      }
+      
+      // Validate languages known
+      var checkedCount = 0;
+      for (var i = 0; i < languages.length; i++) {
+        if (languages[i].checked) {
+          checkedCount++;
+        }
+      }
+      if (checkedCount == 0) {
+        alert("Please select at least one language known.");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>User Registration Form</h2>
+    <form name="registrationForm" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Your password" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <label for="phone">Phone Number:</label>
+      <select id="countryCode" name="countryCode">
+        <option value="+1">+1 (USA)</option>
+        <option value="+91">+91 (India)</option>
+        <option value="+44">+44 (UK)</option>
+        <option value="+61">+61 (Australia)</option>
+      </select>
+      <input type="text" id="phone" name="phone" placeholder="Your phone number" pattern="[0-9]{10}" required>
+
+      <label for="sex">Sex:</label>
+      <br>
+      <input type="radio" id="male" name="sex" value="male" required>
+      <label for="male">Male</label>
+      <br>
+      <input type="radio" id="female" name="sex" value="female">
+      <label for="female">Female</label>
+      <br>
+      <input type="radio" id="other" name="sex" value="other">
+      <label for="other">Other</label>
+
+      <label for="dob">Date of Birth:</label>
+      <br>
+      <select id="dob-day" name="dob-day" required>
+        <option value="">Day</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <!-- ...more options for days... -->
+        <option value="31">31</option>
+      </select>
+      <select id="dob-month" name="dob-month" required>
+        <option value="">Month</option>
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <!-- ...more options for months... -->
+        <option value="12">December</option>
+      </select>
+      <select id="dob-year" name="dob-year" required>
+        <option value="">Year</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <!-- ...more options for years... -->
+        <option value="2023">2023</option>
+      </select>
+
+      <label for="languages">Languages known:</label>
+      <br>
+      <input type="checkbox" id="english" name="languages[]" value="english">
+      <label for="english">English</label>
+      <br>
+      <input type="checkbox" id="marathi" name="languages[]" value="marathi">
+      <label for="marathi">Marathi</label>
+      <br>
+      <input type="checkbox" id="hindi" name="languages[]" value="hindi">
+      <label for="hindi">Hindi</label>
+      <br>
+      <input type="checkbox" id="tamil" name="languages[]" value="tamil">
+      <label for="tamil">Tamil</label>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" placeholder="Your address" rows="4" required></textarea>
+
+      <input type="submit" value="Register">
+    </form>
+  </div>
+</body>
+</html>

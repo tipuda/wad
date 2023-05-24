@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Data List</title>
+</head>
+
+<body>
+    <h2>Registration Data List</h2>
+    <ul id="registrationList"></ul>
+
+    <script>
+        // Retrieve the registration data from local storage or AJAX response
+        var data = localStorage.getItem('UserData');
+
+        console.log(data);
+
+        // Parse the JSON string into a JavaScript object
+        var registrationData = JSON.parse(data);
+
+        // Access the individual properties and display them
+        var registrationList = document.getElementById('registrationList');
+        registrationList.innerHTML += '<li>Name: ' + registrationData.name + '</li>';
+        registrationList.innerHTML += '<li>Email: ' + registrationData.email + '</li>';
+    </script>
+</body>
+
+</html>

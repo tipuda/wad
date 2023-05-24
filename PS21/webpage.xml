@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>My Web Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <h1>Welcome to My Web Page</h1>
+  <p>This is a sample web page created using XML.</p>
+  <p>Here are a few things you can do:</p>
+  <ul>
+    <li>Learn XML</li>
+    <li>Create web pages</li>
+    <li>Build web applications</li>
+  </ul>
+</body>
+</html>

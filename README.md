@@ -37,15 +37,15 @@ character, not be less than 8 characters length).
   A. Navigation from one page to another. 
   B. Navigation within the page.
 12. Create a “User Registration form “with the following fields 
-  1. Name (Text field) 
-  2. Password (password field) 
-  3. E-mail id (should not contain any invalid and must follow the 
+  a. Name (Text field) 
+  b. Password (password field) 
+  c. E-mail id (should not contain any invalid and must follow the 
 standard pattern name@domain.com) 
-  4. Phone number (Create drop down for country code and mobile 
+  d. Phone number (Create drop down for country code and mobile 
 number should be 10 digits only. ) 
-  5. Sex (radio button) 
-  6. Date of birth (3 select boxes) 
-  7. Languages known (check boxes – English, Marathi, Hindi, Tamil) 
+  e. Sex (radio button) 
+  f. Date of birth (3 select boxes) 
+  g. Languages known (check boxes – English, Marathi, Hindi, Tamil) 
 Address (text area)
 13. Write a JavaScript program to validate USER LOGIN page.
 14. Write a HTML program for time-table using tables.

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-heading {
+        text-align: center;
+    }
+
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .widget {
+      flex: 1 1 300px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .widget {
+        flex-basis: 100%;
+      }
+    }
+
+    .widget h2 {
+      margin-top: 0;
+    }
+
+    .widget p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Admin Dashboard</h1>
+  </div>
+
+  <h2 class="main-heading">E-commerce Statistics</h2>
+
+  <div class="container">
+    <div class="widget">
+      <h2>Sales</h2>
+      <p>Total Sales: $10,000</p>
+      <p> Average Monthly Sales: $1000</p>
+      <p> Average Weekly Sales: $300</p>
+    </div>
+
+    <div class="widget">
+      <h2>Orders</h2>
+      <p>Total Orders: 500</p>
+      <p>Average Monthly Orders: 50</p>
+      <p>Average Weekly Orders: 10</p>
+    </div>
+
+    <div class="widget">
+      <h2>Customers</h2>
+      <p>Total Customers: 350</p>
+      <p>Active Customers: 50</p>
+    </div>
+
+    <div class="widget">
+        <h2>Orders Statistics by Country</h2>
+        <p> India: 200</p>
+        <p> USA: 80</p>
+        <p> Canada: 120</p>
+      </div>
+  </div>
+</body>
+</html>
+

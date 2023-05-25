@@ -4,9 +4,9 @@ WEB APPLICATION DEVELOPMENT
 PRACTICAL QUESTION BANK 
 1. Design the following static web pages required for an college/ ecommerce/ social 
 media web site.
-1. Login Page 
-2. Home Page 
-3. Registration Page
+  a. Login Page 
+  b. Home Page 
+  c. Registration Page
 2. Develop and demonstrate the usage of inline, internal and external style sheet 
 using CSS.
 3. Write a JavaScript Program to get the user registration data and push to 
